@@ -9,6 +9,21 @@ public class Main {
                 Message.Planet.Mars
         );
 
-        System.out.printf("Language: %s", Message.getPlanetString(m1.getSourcePlanet()));
+        System.out.printf(
+                //String
+                """
+                        ID                 : %s
+                        Language           : %s
+                        Message            : %s
+                        Source Planet      : %s
+                        Destination Planet : %s""",
+
+                //passing
+                m1.getID(),
+                m1.getLanguage(),
+                m1.getMessage(),
+                Message.getPlanetString(m1.getSourcePlanet()),
+                Message.getPlanetString(m1.getDestinationPlanet())
+        );
     }
 }
