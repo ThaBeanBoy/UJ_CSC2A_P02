@@ -1,4 +1,6 @@
 package accse.csc2a;
+
+import accse.csc2a.ID_Generator;
 public class Message{
     private static int MessageNo = 0;
 
@@ -50,26 +52,13 @@ public class Message{
     //UTILITY FUNCTIONS
     private void init(String Language, String Message, Planet SourcePlanet, Planet DestinationPlanet){
         //Setting properties
-        this.ID = generateID();
+        this.ID = ID_Generator.Generate("MSG", 6, MessageNo);
+        MessageNo++;
+
         this.Language = Language;
         this.Message = Message;
         this.SourcePlanet = SourcePlanet;
         this.DestinationPlanet = DestinationPlanet;
-    }
-
-    private static String generateID(){
-        StringBuilder generatedID = new StringBuilder("MSG");
-        String MessageNumberString = String.valueOf(MessageNo);
-
-        int NoOfDigitsInMessageNo = MessageNumberString.length();
-        final int noOfNumbersInID = 6;
-
-        //Generating ID
-        generatedID.append("0".repeat(noOfNumbersInID - NoOfDigitsInMessageNo));
-        generatedID.append(MessageNumberString);
-
-        MessageNo++;
-        return generatedID.toString();
     }
 
     public static String getPlanetString(Planet Planet){
