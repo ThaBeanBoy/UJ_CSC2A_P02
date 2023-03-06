@@ -13,7 +13,7 @@
 
 ## Additional Information
 
-[github repo](https://github.com/ThaBeanBoy/UJ_CSC2A_P02)
+[github repo](https://github.com/ThaBeanBoy/UJ_CSC2A_P02) <br/>
 [Assignment](./docs/Assignment.pdf)
 
 ## Class Structure
