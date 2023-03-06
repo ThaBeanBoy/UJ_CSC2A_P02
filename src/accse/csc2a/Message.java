@@ -1,8 +1,15 @@
 package accse.csc2a;
 
 import accse.csc2a.ID_Generator;
+
+/**
+ * Message class contains the Language the message is in, the message itself, the source planet of the message & the destination planet of the message
+ * @author TG Chipoyera 220150124
+ * @version P02
+ * @see ID_Generator
+ */
 public class Message{
-    private static int MessageNo = 0;
+    private static int Message_No = 0;
 
     public static enum Planet {
         Mercury,
@@ -22,12 +29,16 @@ public class Message{
     private Planet SourcePlanet;
     private Planet DestinationPlanet;
 
-    public static String DEFAULT_LANGUAGE = "Eng";
-    public static String DEFAULT_MESSAGE = "Hello World";
-    public static Planet DEFAULT_SOURCE_PLANET = Planet.Earth;
-    public static Planet DEFAULT_DESTINATION_PLANET = Planet.Mars;
+    public final static String DEFAULT_LANGUAGE = "Eng";
+    public final static String DEFAULT_MESSAGE = "Hello World";
+    public final static Planet DEFAULT_SOURCE_PLANET = Planet.Earth;
+    public final static Planet DEFAULT_DESTINATION_PLANET = Planet.Mars;
 
     //CONSTRUCTORS
+
+    /**
+     * Creates message object with default properties
+     */
     public Message(){
         this.init(
                 DEFAULT_LANGUAGE,
@@ -37,6 +48,13 @@ public class Message{
         );
     }
 
+    /**
+     * Creates a Message object with user defined properties
+     * @param Language, string - The language the Message is in
+     * @param Message, string -  The message itself
+     * @param SourcePlanet Planet -  The Planet where the message is coming from
+     * @param DestinationPlanet Planet -  The Planet where the message is traveling to
+     */
     public Message(String Language, String Message, Planet SourcePlanet, Planet DestinationPlanet){
         this.init(Language, Message, SourcePlanet, DestinationPlanet);
     }
@@ -52,8 +70,8 @@ public class Message{
     //UTILITY FUNCTIONS
     private void init(String Language, String Message, Planet SourcePlanet, Planet DestinationPlanet){
         //Setting properties
-        this.ID = ID_Generator.Generate("MSG", 6, MessageNo);
-        MessageNo++;
+        this.ID = ID_Generator.Generate("MSG", 6, Message_No);
+        Message_No++;
 
         this.Language = Language;
         this.Message = Message;

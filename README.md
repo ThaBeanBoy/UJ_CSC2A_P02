@@ -1,6 +1,95 @@
-# Things I've Learned
+(github repo)[https://]
 
-## Enhanced Switch Statement
+## (ID_Generator)[link to file] class
+
+### Purpose of ID Generator class
+The first class that I worked on was the Message class. it initially had a ```public static void generateID``` method.
+It's main purpose was to generate an ID for a message based on it's prefix & message number. When I eventually got to 
+the Ship class, I realised that the structure of the Ship ID class was similar to the structure of the Message class,
+
+Both forms of ID had :
+- prefix
+- length of digits the ID could have
+- the id number
+
+
+## Generating the ID
+1. Base of the list from the previous section, we could use this to generate an ID, first we needed a ```StringBuilder```, 
+this could allow us to easily append new info to the string.
+2. Filling up the string. the ID could have any number of digits, yet the amount of digits the ID could have was fixed.
+In order to alleviate this, we had to :
+   - calculate the number of digits in the ```ID_no``` - Convert ```ID_no``` into
+   a string & save this into ```ID_noString```
+   - Get the length of the string. this is how we get the number of digits in the ID number, saved into ```NoOfDigitsInMessageNo``` 
+   - Subtract the number of digits the from the total number of digits that the ID should have, this number was saved in ```filler```.
+3. Append the ID number
+4. Return the generated ID
+
+### The exception
+
+```java
+public class ID_Generator {
+    public static String Generate(String Prefix, int numberOfDigits, int ID_no) throws ID_NO_ERR {
+        if(ID_no > numberOfDigits)
+            throw new ID_NO_ERR();
+
+        StringBuilder generatedID = new StringBuilder(Prefix);
+        String ID_noString = String.valueOf(ID_no);
+
+        int NoOfDigitsInMessageNo = ID_noString.length();
+        int filler = numberOfDigits - NoOfDigitsInMessageNo;
+        //Generating ID
+        generatedID.append("0".repeat(filler));
+        generatedID.append(ID_noString);
+
+        return generatedID.toString();
+    }
+}
+```
+
+## Things I've Learned
+
+### Enhanced for loop
+Initially
+```java
+public class Ship{
+    //Rest of Ship class
+    
+    public void printMessages(){
+        // Rest of printMessages()
+        
+        for (int i=0; i<this.Messages.length(); i++){
+            Message currentMessage = this.Messages[i]; 
+            //Loop code
+        }
+
+        // Rest of printMessages()
+    }    
+    
+    //Rest of Ship class
+}
+```
+
+Finally
+```java
+public class Ship{
+    //Rest of Ship class
+    
+    public void printMessages(){
+        // Rest of printMessages()
+        
+        for (Message Message : this.Messages){
+            //Loop code
+        }
+
+        // Rest of printMessages()
+    }    
+    
+    //Rest of Ship class
+}
+```
+
+### Enhanced Switch Statement
 
 ```java
 public class Message{
@@ -63,7 +152,7 @@ public class Message{
 }
 ```
 
-## Using Text Block
+### Using Text Block
 
 The tect block is something that made the following block look neat and concise
 ```java
