@@ -1,6 +1,9 @@
-(github repo)[https://]
+# UJ CSC2A Practical 2
 
-## (ID_Generator)[link to file] class
+[github repo](https://github.com/ThaBeanBoy/UJ_CSC2A_P02)
+[Assignment](./docs/Assignment.pdf)
+
+## [ID_Generator](./src/accse/csc2a/Message.java) class
 
 ### Purpose of ID Generator class
 The first class that I worked on was the Message class. it initially had a ```public static void generateID``` method.
@@ -24,8 +27,6 @@ In order to alleviate this, we had to :
    - Subtract the number of digits the from the total number of digits that the ID should have, this number was saved in ```filler```.
 3. Append the ID number
 4. Return the generated ID
-
-### The exception
 
 ```java
 public class ID_Generator {

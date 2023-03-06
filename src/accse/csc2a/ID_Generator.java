@@ -1,7 +1,19 @@
 package accse.csc2a;
 
+/**
+ * Suppose to generate IDs
+ * @author TG Chipoyera 220150124
+ * @version P02
+ */
 public class ID_Generator {
-    public static String Generate(String Prefix, int numberOfDigits, int ID_no) throws ID_NO_ERR {
+    /**
+     * Generates the ID
+     * @param Prefix The prefix to the ID number e.g 'MSG00000'
+     * @param numberOfDigits the number of digits the ID should be
+     * @param ID_no the actual ID number
+     * @return string
+     */
+    public static String Generate(String Prefix, int numberOfDigits, int ID_no) {
         StringBuilder generatedID = new StringBuilder(Prefix);
         String ID_noString = String.valueOf(ID_no);
 

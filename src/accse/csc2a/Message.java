@@ -60,10 +60,35 @@ public class Message{
     }
 
     //PUBLIC METHODS
+
+    /**
+     * Returns the ID of the Message
+     * @return string
+     */
     public final String getID(){ return this.ID; }
+
+    /**
+     * Returns the language of the Message
+     * @return string
+     */
     public final String getLanguage(){ return this.Language; }
+
+    /**
+     * Returns the message
+     * @return string
+     */
     public final String getMessage() { return this.Message; }
+
+    /**
+     * Returns the Source Planet of the message
+     * @return Planet
+     */
     public final Planet getSourcePlanet() {return this.SourcePlanet; }
+
+    /**
+     * Returns the Destination Planet of the message
+     * @return Planet
+     */
     public final Planet getDestinationPlanet() { return this.DestinationPlanet; }
 
 
@@ -79,6 +104,11 @@ public class Message{
         this.DestinationPlanet = DestinationPlanet;
     }
 
+    /**
+     * Returns the Planet in string form
+     * @param Planet The Planet Enum
+     * @return string
+     */
     public static String getPlanetString(Planet Planet){
         return switch(Planet){
             case Mercury -> "Mercury";
