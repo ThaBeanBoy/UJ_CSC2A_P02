@@ -1,5 +1,18 @@
 # UJ CSC2A Practical 2
 
+## Index
+- [UJ CSC2A Practical 2](#uj-csc2a-practical-2)
+   * [Class Structure](#class-structure)
+   * [[ID_Generator](./src/accse/csc2a/Message.java) class](#-id-generator---src-accse-csc2a-messagejava--class)
+      + [Purpose](#purpose)
+      + [Generating the ID](#generating-the-id)
+   * [Things I've Learned](#things-i-ve-learned)
+      + [Enhanced for loop](#enhanced-for-loop)
+      + [Enhanced Switch Statement](#enhanced-switch-statement)
+      + [Using Text Block](#using-text-block)
+
+## Additional Information
+
 [github repo](https://github.com/ThaBeanBoy/UJ_CSC2A_P02)
 [Assignment](./docs/Assignment.pdf)
 
