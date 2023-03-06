@@ -3,9 +3,13 @@
 [github repo](https://github.com/ThaBeanBoy/UJ_CSC2A_P02)
 [Assignment](./docs/Assignment.pdf)
 
+## Class Structure
+
+![UML Diagram](./docs/UML.png)
+
 ## [ID_Generator](./src/accse/csc2a/Message.java) class
 
-### Purpose of ID Generator class
+### Purpose
 The first class that I worked on was the Message class. it initially had a ```public static void generateID``` method.
 It's main purpose was to generate an ID for a message based on it's prefix & message number. When I eventually got to 
 the Ship class, I realised that the structure of the Ship ID class was similar to the structure of the Message class,
@@ -16,7 +20,7 @@ Both forms of ID had :
 - the id number
 
 
-## Generating the ID
+### Generating the ID
 1. Base of the list from the previous section, we could use this to generate an ID, first we needed a ```StringBuilder```, 
 this could allow us to easily append new info to the string.
 2. Filling up the string. the ID could have any number of digits, yet the amount of digits the ID could have was fixed.
@@ -51,7 +55,8 @@ public class ID_Generator {
 ## Things I've Learned
 
 ### Enhanced for loop
-Initially
+I used a regular for loop, but IntelliJ suggested using an enhanced for loop to loop through the messages. This is how it
+initially looked:
 ```java
 public class Ship{
     //Rest of Ship class
@@ -70,8 +75,7 @@ public class Ship{
     //Rest of Ship class
 }
 ```
-
-Finally
+This is the enhanced version of the for loop:
 ```java
 public class Ship{
     //Rest of Ship class
