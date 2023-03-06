@@ -3,7 +3,7 @@
 ## Index
 - [UJ CSC2A Practical 2](#uj-csc2a-practical-2)
    * [Class Structure](#class-structure)
-   * [[ID_Generator](./src/accse/csc2a/Message.java) class](#-id-generator---src-accse-csc2a-messagejava--class)
+   * [ID_Generator](#-id-generator---src-accse-csc2a-messagejava--class)
       + [Purpose](#purpose)
       + [Generating the ID](#generating-the-id)
    * [Things I've Learned](#things-i-ve-learned)
