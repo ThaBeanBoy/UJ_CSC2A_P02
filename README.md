@@ -1,6 +1,7 @@
 # UJ CSC2A Practical 2
 
 ## Table Of Content
+- [Marks](#marks)
 - [Additional Information](#additional-information)
 - [Class Structure](#class-structure)
 - [ID_Generator class](#id-generator-class)
@@ -10,7 +11,10 @@
     * [Enhanced for loop](#enhanced-for-loop)
     * [Enhanced Switch Statement](#enhanced-switch-statement)
     * [Using Text Block](#using-text-block)
-- [Marks](#marks)
+
+## Marks
+
+![final marks](./docs/Marks.png)
 
 ## Additional Information
 
@@ -225,7 +229,3 @@ public class Main{
     }
 }
 ```
-
-## Marks
-
-[final marks](./docs/Marks.png)
