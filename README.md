@@ -1,15 +1,16 @@
 # UJ CSC2A Practical 2
 
-## Index
-- [UJ CSC2A Practical 2](#uj-csc2a-practical-2)
-   * [Class Structure](#class-structure)
-   * [ID_Generator](#-id-generator---src-accse-csc2a-messagejava--class)
-      + [Purpose](#purpose)
-      + [Generating the ID](#generating-the-id)
-   * [Things I've Learned](#things-i-ve-learned)
-      + [Enhanced for loop](#enhanced-for-loop)
-      + [Enhanced Switch Statement](#enhanced-switch-statement)
-      + [Using Text Block](#using-text-block)
+## Table Of Content
+- [Additional Information](#additional-information)
+- [Class Structure](#class-structure)
+- [ID_Generator class](#id-generator-class)
+    * [Purpose](#purpose)
+    * [Generating the ID](#generating-the-id)
+- [Things I've Learned](#things-i-ve-learned)
+    * [Enhanced for loop](#enhanced-for-loop)
+    * [Enhanced Switch Statement](#enhanced-switch-statement)
+    * [Using Text Block](#using-text-block)
+- [Marks](#marks)
 
 ## Additional Information
 
@@ -20,7 +21,7 @@
 
 ![UML Diagram](./docs/UML.png)
 
-## [ID_Generator](./src/accse/csc2a/Message.java) class
+## ID_Generator class
 
 ### Purpose
 The first class that I worked on was the Message class. it initially had a ```public static void generateID``` method.
@@ -224,3 +225,7 @@ public class Main{
     }
 }
 ```
+
+## Marks
+
+[final marks](./docs/Marks.png)
